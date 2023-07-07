@@ -58,7 +58,7 @@ const ReviewPopup = ({ suggestions, feedback, loadingStatus, loadSuggestions, ad
         for(let i = 0; i < suggestions.okaySuggestions.length; i++) {
             tempData[okayIndex]?.suggestions?.push({
                 label: suggestions.okaySuggestions[i],
-                key: i.toString(),
+                key: i.toString()
             })
         }
         for(let i = 0; i < suggestions.awesomeSuggestions.length; i++) {

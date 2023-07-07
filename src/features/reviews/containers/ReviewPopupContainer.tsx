@@ -6,6 +6,7 @@ import { IFeedbackItem, ISuggestionItem } from '../../../types/IReviewItem';
 import { loadSuggestions, addFeedback } from '../reviewAction';
 import EmojiDropdownPopup from '../../../components/EmojiDropdownPopup';
 import { MenuProps } from 'antd';
+import { useParams } from 'react-router-dom';
 
 interface IPopupStateProps {
     suggestions: ISuggestionItem;
@@ -25,7 +26,7 @@ interface IPopupDispatchProps {
 }
 
 const ReviewPopup = ({ suggestions, feedback, loadingStatus, loadSuggestions, addFeedback }: IPopupStateProps & IPopupDispatchProps) => {
-
+    const { email } = useParams<{ email: string }>();
     const [visible, setVisible] = useState(false);
     const emojiTerrible = '🙁';
     const emojiOkay = '😕';
@@ -67,7 +68,7 @@ const ReviewPopup = ({ suggestions, feedback, loadingStatus, loadSuggestions, ad
                 key: i.toString(),
             })
         }
-        console.log(tempData);
+        // console.log(tempData);
         setData(tempData);
         setTimeout(() => {
             setVisible(true);

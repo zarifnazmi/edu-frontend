@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button } from 'antd';
+import '../index.css'
+import SigninContainer from '../features/signin/containers/SigninContainer';
 
 function Home() : JSX.Element {
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-      <Button type="primary">Button</Button>
-      </header>
+    <div className="center-screen">
+      <SigninContainer />
     </div>
   );
 }

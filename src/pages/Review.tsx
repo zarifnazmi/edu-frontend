@@ -5,10 +5,8 @@ import { ReviewPopupContainer } from '../features/reviews/containers/ReviewPopup
 
 function Review() : JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
       <ReviewPopupContainer />
-      </header>
     </div>
   );
 }

@@ -10,12 +10,10 @@ import {
   addingFeedback,
   addingFeedbackFailed
 } from "./reviewAction";
-import { IReviewState } from "./reviewReducer";
 import { from, of } from "rxjs";
 import { isOfType } from "typesafe-actions";
 import { loadSuggestions } from "../../api/reviewService";
 import { addFeedback } from "../../api/reviewService";
-import { IFeedbackItem } from "../../types/IReviewItem";
 import { IState } from "../../store/rootReducer";
 
 const loadSuggestionsEpic: Epic<ReviewAction, ReviewAction, IState> = (

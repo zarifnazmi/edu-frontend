@@ -41,7 +41,7 @@ const ReviewPopup = ({ suggestions, addingStatus, loadingStatus, loadSuggestions
 
     return (
         <div>
-            {loadingStatus === ApiStatus.LOADED && <EmojiDropdownPopup data={suggestions} popup_state={visible} extra_text='Can you tell us why?' popup_title='How was you class today?' popup_desc='Your honest answer will help to improve your class in the future' handleCancel={handleCancel} handleTerribleClick={addFeedback} email={values.email} />}
+            {loadingStatus === ApiStatus.LOADED && <EmojiDropdownPopup data={suggestions} popup_state={visible} extra_text='Can you tell us why?' popup_title='How was you class today?' popup_desc='Your honest answer will help to improve your class in the future' handleCancel={handleCancel} onClick={addFeedback} email={values.email}  />}
             {loadingStatus === ApiStatus.LOADING || visible === false ? <Loader /> : null}
             {addingStatus === ApiStatus.FAILED ? <ErrorAlert message="Email is invalid" /> : null}
         </div>

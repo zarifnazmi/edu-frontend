@@ -2,12 +2,12 @@ import { IFeedbackItem } from "../types/IReviewItem";
 
 export const loadSuggestions = () =>
   fetch(
-    `http://localhost:8000/review/suggestions`
+    process.env.REACT_APP_SUGGESTIONS_API
   ).then(response => response.json());
 
 export const addFeedback = (feedback: IFeedbackItem) =>
   fetch(
-    `http://localhost:8000/review/feedbacks`, {
+    process.env.REACT_APP_FEEDBACK_API, {
         body: JSON.stringify(feedback),
           headers: {
             "content-Type": "application/json"

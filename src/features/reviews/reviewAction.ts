@@ -26,7 +26,7 @@ export interface ILoadingSuggestionsAction {
 export interface ILoadedSuggestionsAction {
     type: ReviewActionTypes.LOADED_SUGGESTIONS,
     payload: {
-        suggestions: ISuggestionItem;
+        suggestions: ISuggestionItem[];
     }
 }
 
@@ -46,7 +46,7 @@ export function loadingSuggestions(): ILoadingSuggestionsAction {
     }
 }
 
-export function loadedSuggestions(suggestions: ISuggestionItem): ILoadedSuggestionsAction {
+export function loadedSuggestions(suggestions: ISuggestionItem[]): ILoadedSuggestionsAction {
     return {
         type: ReviewActionTypes.LOADED_SUGGESTIONS,
         payload: {

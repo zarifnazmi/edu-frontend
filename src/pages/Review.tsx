@@ -1,11 +1,10 @@
 import React from 'react';
-import { Button } from 'antd';
-import EmojiDropdownPopup from '../components/EmojiDropdownPopup';
+import '../index.css'
 import { ReviewPopupContainer } from '../features/reviews/containers/ReviewPopupContainer';
 
 function Review() : JSX.Element {
   return (
-    <div>
+    <div className="center-screen">
       <ReviewPopupContainer />
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Form, Typography, Card, Button, Input, Alert } from 'antd';
+import { Form, Typography, Card, Button, Input } from 'antd';
 import { FormInstance } from 'antd/lib/form';
+import ErrorAlert from './ErrorAlert';
 
 const { Title } = Typography;
 
@@ -51,7 +52,7 @@ function CardEmailForm(prop: FormProps): JSX.Element {
                     </Button>
                 </Form.Item>
 
-                {prop.hasError ? <Alert message="Email is invalid" type="error" /> : null}
+                {prop.hasError ? <ErrorAlert message="Email is invalid" /> : null}
             </Form>
         </Card>
     </>;

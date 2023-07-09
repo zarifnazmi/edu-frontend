@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
  ## Screenshots
 
-![](./public/readme-pics/ss_1.PNG) ![](./public/readme-pics/ss_2.PNG) ![](./public/readme-pics/ss_3.PNG)
+![](./public/readme-pics/ss_1.png) ![](./public/readme-pics/ss_2.png) ![](./public/readme-pics/ss_3.png)
 
 ## Run the app
 
